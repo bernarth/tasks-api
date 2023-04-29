@@ -5,6 +5,7 @@ We installed:
 - express
 - mortan
 - cors
+- dotenv
 
 And dev dependencies:
 - nodemon
