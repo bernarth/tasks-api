@@ -8,3 +8,6 @@ We installed:
 
 And dev dependencies:
 - nodemon
+
+To read database:
+- pg
