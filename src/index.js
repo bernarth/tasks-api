@@ -5,7 +5,13 @@ const taskRoutes = require('./routes/tasks.routes');
 const app = express();
 
 app.use(morgan('dev'));
-app.use(taskRoutes)
+app.use(express.json());
+app.use(taskRoutes);
+app.use((err, req, res, next) => {
+  return res.status(400).json({
+    message: err.message
+  });
+});
 
 app.listen(4000);
 console.log('server on port 4000');
