@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const taskRoutes = require('./routes/tasks.routes');
+const { port } = require('./config');
 
 const app = express();
 
@@ -15,5 +16,5 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(4000);
-console.log('server on port 4000');
+app.listen(port);
+console.log(`server on port ${port}`);
